@@ -5,7 +5,7 @@ cmp.setup({
   sources = {
     {name = 'nvim_lsp'},
     {name = 'buffer'},
-    --{name = 'luasnip'},
+    {name = 'luasnip'},
   },
   --- (Optional) Show source name in completion menu
   formatting = cmp_format,
