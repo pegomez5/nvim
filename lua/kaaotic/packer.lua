@@ -13,10 +13,42 @@ return require('packer').startup(function(use)
   }
 
   use({
+      'olivercederborg/poimandres.nvim',
+      as = 'poimandres',
+      config = function()
+          vim.cmd('colorscheme poimandres')
+      end
+  })
+
+  use({
+      'shaunsingh/moonlight.nvim',
+      as = 'moonlight',
+      config = function()
+          vim.cmd('colorscheme moonlight')
+      end
+  })
+
+  use({
       'folke/tokyonight.nvim',
       as = 'tokyonight',
       config = function()
           vim.cmd('colorscheme tokyonight')
+      end
+  })
+
+  use({
+      'sainnhe/gruvbox-material',
+      as = 'gruvbox-material',
+      config = function()
+          vim.cmd('colorscheme gruvbox-material')
+      end
+  })
+
+  use({
+      'maxmx03/fluoromachine.nvim',
+      as = 'fluoromachine',
+      config = function()
+          vim.cmd('colorscheme fluoromachine')
       end
   })
 
