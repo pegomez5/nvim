@@ -6,7 +6,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-  use "github/copilot.vim"
+  --use "github/copilot.vim"
 
   use {
       'nvim-telescope/telescope.nvim', tag='0.1.8',
@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/playground')
   use('ThePrimeagen/harpoon')
   use('nvim-lua/plenary.nvim')
+
   use {
       "windwp/nvim-autopairs",
       event = "InsertEnter",
@@ -64,11 +65,18 @@ return require('packer').startup(function(use)
           require("nvim-autopairs").setup {}
       end
   }
-  use{
-      'VonHeikemen/lsp-zero.nvim',
+
+  use {
+      'nvim-tree/nvim-tree.lua',
       requires = {
-          {'williamboman/mason.nvim'},
-          {'williamboman/mason-lspconfig.nvim'},
+          'nvim-tree/nvim-web-devicons', -- optional
+      },
+  }
+
+  use{
+      'mason-org/mason-lspconfig.nvim',
+      requires = {
+          {'mason-org/mason.nvim'},
           {'neovim/nvim-lspconfig'},
           {'hrsh7th/nvim-cmp'},
           {'hrsh7th/cmp-nvim-lsp'},
