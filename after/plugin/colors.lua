@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-    color = color or "moonlight"
+    color = color or "tokyonight"
     vim.cmd.colorscheme(color)
 
     -- transparent background
